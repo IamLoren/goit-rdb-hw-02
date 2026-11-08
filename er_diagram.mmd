@@ -1,0 +1,58 @@
+erDiagram
+    HW2_LEARNERS ||--o{ HW2_LEARNER_SKILLS : practices
+    HW2_SKILLS ||--o{ HW2_LEARNER_SKILLS : "is practiced"
+    HW2_LEARNERS ||--o{ HW2_SESSIONS : has
+    HW2_SKILLS ||--o{ HW2_SESSIONS : "is used in"
+    HW2_LEARNERS ||--o{ HW2_LEARNER_FEATURES_OFFLINE : "has versions"
+    HW2_LEARNERS ||--o{ HW2_TRAINING_EVENTS : "has predictions"
+    HW2_LEARNERS ||--o| HW2_LEARNER_FEATURES_ONLINE : "has latest"
+
+    HW2_LEARNERS {
+        bigint learner_id PK
+        date signup_date
+        text country
+        integer grade
+    }
+    HW2_SKILLS {
+        integer skill_id PK
+        varchar skill_name UK
+        integer difficulty_level
+    }
+    HW2_LEARNER_SKILLS {
+        bigint learner_id PK, FK
+        integer skill_id PK, FK
+        timestamptz started_at
+    }
+    HW2_SESSIONS {
+        bigint session_id PK
+        bigint learner_id FK
+        integer skill_id FK
+        timestamptz started_at
+        numeric duration_minutes
+        integer mistakes
+    }
+    HW2_LEARNER_FEATURES_OFFLINE {
+        bigint learner_id PK, FK
+        timestamptz valid_from PK
+        timestamptz valid_to
+        integer sessions_30d
+        numeric avg_session_minutes
+        numeric error_rate
+        text segment
+    }
+    HW2_TRAINING_EVENTS {
+        bigint event_id PK
+        bigint learner_id FK
+        timestamptz prediction_ts
+        timestamptz label_horizon_end
+        boolean churn_in_horizon
+    }
+    HW2_LEARNER_FEATURES_ONLINE {
+        bigint learner_id PK, FK
+        integer sessions_30d
+        numeric avg_session_minutes
+        numeric error_rate
+        text segment
+        timestamptz feature_ts
+        timestamptz updated_at
+    }

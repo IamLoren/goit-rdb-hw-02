@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1480" height="780" viewBox="0 0 1480 780" font-family="Consolas, Courier New, monospace">
+<rect width="1480" height="780" fill="#ffffff"/>
+<rect x="14" y="14" width="1060" height="702" rx="10" fill="#f8fafc" stroke="#94a3b8" stroke-dasharray="6 4"/>
+<text x="26" y="34" font-size="13" font-weight="bold" fill="#475569">CORE: сутності домену</text>
+<rect x="1104" y="14" width="356" height="410" rx="10" fill="#fffbeb" stroke="#d97706" stroke-dasharray="6 4"/>
+<text x="1116" y="36" font-size="13" font-weight="bold" fill="#92400e">OFFLINE: історія ознак і навчальні події</text>
+<rect x="1104" y="490" width="356" height="226" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-dasharray="6 4"/>
+<text x="1116" y="512" font-size="13" font-weight="bold" fill="#166534">ONLINE: поточний стан для швидкого lookup</text>
+<polyline points="340,188 365,188 365,88 390,88" fill="none" stroke="#334155" stroke-width="1.6"/>
+<polyline points="185,246 185,378 390,378" fill="none" stroke="#334155" stroke-width="1.6"/>
+<polyline points="700,88 725,88 725,378" fill="none" stroke="#334155" stroke-width="1.6"/>
+<polyline points="700,378 725,378" fill="none" stroke="#334155" stroke-width="1.6"/>
+<polyline points="750,288 725,288" fill="none" stroke="#334155" stroke-width="1.6"/>
+<polyline points="1060,288 1088,288" fill="none" stroke="#334155" stroke-width="1.6"/>
+<polyline points="1088,144 1088,614" fill="none" stroke="#334155" stroke-width="1.6"/>
+<polyline points="1088,144 1134,144" fill="none" stroke="#334155" stroke-width="1.6"/>
+<polyline points="1088,338 1134,338" fill="none" stroke="#334155" stroke-width="1.6"/>
+<polyline points="1088,614 1134,614" fill="none" stroke="#334155" stroke-width="1.6"/>
+<text x="344" y="182" font-size="11" font-weight="bold" fill="#0f172a">1</text>
+<text x="190" y="264" font-size="11" font-weight="bold" fill="#0f172a">1</text>
+<text x="360" y="80" font-size="11" font-weight="bold" fill="#0f172a">0..*</text>
+<text x="360" y="370" font-size="11" font-weight="bold" fill="#0f172a">0..*</text>
+<text x="704" y="80" font-size="11" font-weight="bold" fill="#0f172a">0..*</text>
+<text x="704" y="370" font-size="11" font-weight="bold" fill="#0f172a">0..*</text>
+<text x="730" y="282" font-size="11" font-weight="bold" fill="#0f172a">1</text>
+<text x="1064" y="282" font-size="11" font-weight="bold" fill="#0f172a">1</text>
+<text x="1108" y="136" font-size="11" font-weight="bold" fill="#0f172a">0..*</text>
+<text x="1108" y="330" font-size="11" font-weight="bold" fill="#0f172a">0..*</text>
+<text x="1108" y="606" font-size="11" font-weight="bold" fill="#0f172a">0..1</text>
+<rect x="750" y="230" width="310" height="116" rx="6" fill="#ffffff" stroke="#334155" stroke-width="1.5"/>
+<rect x="750" y="230" width="310" height="28" rx="6" fill="#dbeafe" stroke="#334155" stroke-width="1.5"/>
+<text x="760" y="249" font-size="13" font-weight="bold" fill="#0f172a">hw2_learners</text>
+<text x="760" y="273" font-size="12" fill="#0f172a">learner_id</text>
+<text x="910" y="273" font-size="12" fill="#64748b">BIGINT</text>
+<text x="1050" y="273" font-size="12" font-weight="bold" text-anchor="end" fill="#b91c1c">PK</text>
+<text x="760" y="293" font-size="12" fill="#0f172a">signup_date</text>
+<text x="910" y="293" font-size="12" fill="#64748b">DATE</text>
+<text x="760" y="313" font-size="12" fill="#0f172a">country</text>
+<text x="910" y="313" font-size="12" fill="#64748b">TEXT</text>
+<text x="760" y="333" font-size="12" fill="#0f172a">grade</text>
+<text x="910" y="333" font-size="12" fill="#64748b">INTEGER</text>
+<rect x="30" y="150" width="310" height="96" rx="6" fill="#ffffff" stroke="#334155" stroke-width="1.5"/>
+<rect x="30" y="150" width="310" height="28" rx="6" fill="#dbeafe" stroke="#334155" stroke-width="1.5"/>
+<text x="40" y="169" font-size="13" font-weight="bold" fill="#0f172a">hw2_skills</text>
+<text x="40" y="193" font-size="12" fill="#0f172a">skill_id</text>
+<text x="190" y="193" font-size="12" fill="#64748b">INTEGER</text>
+<text x="330" y="193" font-size="12" font-weight="bold" text-anchor="end" fill="#b91c1c">PK</text>
+<text x="40" y="213" font-size="12" fill="#0f172a">skill_name</text>
+<text x="190" y="213" font-size="12" fill="#64748b">VARCHAR(100)</text>
+<text x="330" y="213" font-size="12" font-weight="bold" text-anchor="end" fill="#7c3aed">UK</text>
+<text x="40" y="233" font-size="12" fill="#0f172a">difficulty_level</text>
+<text x="190" y="233" font-size="12" fill="#64748b">INTEGER</text>
+<rect x="390" y="40" width="310" height="96" rx="6" fill="#ffffff" stroke="#334155" stroke-width="1.5"/>
+<rect x="390" y="40" width="310" height="28" rx="6" fill="#dbeafe" stroke="#334155" stroke-width="1.5"/>
+<text x="400" y="59" font-size="13" font-weight="bold" fill="#0f172a">hw2_learner_skills  (bridge N:M)</text>
+<text x="400" y="83" font-size="12" fill="#0f172a">learner_id</text>
+<text x="550" y="83" font-size="12" fill="#64748b">BIGINT</text>
+<text x="690" y="83" font-size="12" font-weight="bold" text-anchor="end" fill="#b91c1c">PK, FK</text>
+<text x="400" y="103" font-size="12" fill="#0f172a">skill_id</text>
+<text x="550" y="103" font-size="12" fill="#64748b">INTEGER</text>
+<text x="690" y="103" font-size="12" font-weight="bold" text-anchor="end" fill="#b91c1c">PK, FK</text>
+<text x="400" y="123" font-size="12" fill="#0f172a">started_at</text>
+<text x="550" y="123" font-size="12" fill="#64748b">TIMESTAMPTZ</text>
+<rect x="390" y="300" width="310" height="156" rx="6" fill="#ffffff" stroke="#334155" stroke-width="1.5"/>
+<rect x="390" y="300" width="310" height="28" rx="6" fill="#dbeafe" stroke="#334155" stroke-width="1.5"/>
+<text x="400" y="319" font-size="13" font-weight="bold" fill="#0f172a">hw2_sessions</text>
+<text x="400" y="343" font-size="12" fill="#0f172a">session_id</text>
+<text x="550" y="343" font-size="12" fill="#64748b">BIGINT</text>
+<text x="690" y="343" font-size="12" font-weight="bold" text-anchor="end" fill="#b91c1c">PK</text>
+<text x="400" y="363" font-size="12" fill="#0f172a">learner_id</text>
+<text x="550" y="363" font-size="12" fill="#64748b">BIGINT</text>
+<text x="690" y="363" font-size="12" font-weight="bold" text-anchor="end" fill="#1d4ed8">FK</text>
+<text x="400" y="383" font-size="12" fill="#0f172a">skill_id</text>
+<text x="550" y="383" font-size="12" fill="#64748b">INTEGER</text>
+<text x="690" y="383" font-size="12" font-weight="bold" text-anchor="end" fill="#1d4ed8">FK</text>
+<text x="400" y="403" font-size="12" fill="#0f172a">started_at</text>
+<text x="550" y="403" font-size="12" fill="#64748b">TIMESTAMPTZ</text>
+<text x="400" y="423" font-size="12" fill="#0f172a">duration_minutes</text>
+<text x="550" y="423" font-size="12" fill="#64748b">NUMERIC(6,2)</text>
+<text x="400" y="443" font-size="12" fill="#0f172a">mistakes</text>
+<text x="550" y="443" font-size="12" fill="#64748b">INTEGER</text>
+<rect x="1134" y="56" width="310" height="176" rx="6" fill="#ffffff" stroke="#334155" stroke-width="1.5"/>
+<rect x="1134" y="56" width="310" height="28" rx="6" fill="#fde68a" stroke="#334155" stroke-width="1.5"/>
+<text x="1144" y="75" font-size="13" font-weight="bold" fill="#0f172a">hw2_learner_features_offline</text>
+<text x="1144" y="99" font-size="12" fill="#0f172a">learner_id</text>
+<text x="1294" y="99" font-size="12" fill="#64748b">BIGINT</text>
+<text x="1434" y="99" font-size="12" font-weight="bold" text-anchor="end" fill="#b91c1c">PK, FK</text>
+<text x="1144" y="119" font-size="12" fill="#0f172a">valid_from</text>
+<text x="1294" y="119" font-size="12" fill="#64748b">TIMESTAMPTZ</text>
+<text x="1434" y="119" font-size="12" font-weight="bold" text-anchor="end" fill="#b91c1c">PK</text>
+<text x="1144" y="139" font-size="12" fill="#0f172a">valid_to</text>
+<text x="1294" y="139" font-size="12" fill="#64748b">TIMESTAMPTZ</text>
+<text x="1144" y="159" font-size="12" fill="#0f172a">sessions_30d</text>
+<text x="1294" y="159" font-size="12" fill="#64748b">INTEGER</text>
+<text x="1144" y="179" font-size="12" fill="#0f172a">avg_session_minutes</text>
+<text x="1294" y="179" font-size="12" fill="#64748b">NUMERIC(6,2)</text>
+<text x="1144" y="199" font-size="12" fill="#0f172a">error_rate</text>
+<text x="1294" y="199" font-size="12" fill="#64748b">NUMERIC(4,3)</text>
+<text x="1144" y="219" font-size="12" fill="#0f172a">segment</text>
+<text x="1294" y="219" font-size="12" fill="#64748b">TEXT</text>
+<rect x="1134" y="270" width="310" height="136" rx="6" fill="#ffffff" stroke="#334155" stroke-width="1.5"/>
+<rect x="1134" y="270" width="310" height="28" rx="6" fill="#fde68a" stroke="#334155" stroke-width="1.5"/>
+<text x="1144" y="289" font-size="13" font-weight="bold" fill="#0f172a">hw2_training_events</text>
+<text x="1144" y="313" font-size="12" fill="#0f172a">event_id</text>
+<text x="1294" y="313" font-size="12" fill="#64748b">BIGINT</text>
+<text x="1434" y="313" font-size="12" font-weight="bold" text-anchor="end" fill="#b91c1c">PK</text>
+<text x="1144" y="333" font-size="12" fill="#0f172a">learner_id</text>
+<text x="1294" y="333" font-size="12" fill="#64748b">BIGINT</text>
+<text x="1434" y="333" font-size="12" font-weight="bold" text-anchor="end" fill="#1d4ed8">FK</text>
+<text x="1144" y="353" font-size="12" fill="#0f172a">prediction_ts</text>
+<text x="1294" y="353" font-size="12" fill="#64748b">TIMESTAMPTZ</text>
+<text x="1144" y="373" font-size="12" fill="#0f172a">label_horizon_end</text>
+<text x="1294" y="373" font-size="12" fill="#64748b">TIMESTAMPTZ</text>
+<text x="1144" y="393" font-size="12" fill="#0f172a">churn_in_horizon</text>
+<text x="1294" y="393" font-size="12" fill="#64748b">BOOLEAN</text>
+<rect x="1134" y="526" width="310" height="176" rx="6" fill="#ffffff" stroke="#334155" stroke-width="1.5"/>
+<rect x="1134" y="526" width="310" height="28" rx="6" fill="#bbf7d0" stroke="#334155" stroke-width="1.5"/>
+<text x="1144" y="545" font-size="13" font-weight="bold" fill="#0f172a">hw2_learner_features_online</text>
+<text x="1144" y="569" font-size="12" fill="#0f172a">learner_id</text>
+<text x="1294" y="569" font-size="12" fill="#64748b">BIGINT</text>
+<text x="1434" y="569" font-size="12" font-weight="bold" text-anchor="end" fill="#b91c1c">PK, FK</text>
+<text x="1144" y="589" font-size="12" fill="#0f172a">sessions_30d</text>
+<text x="1294" y="589" font-size="12" fill="#64748b">INTEGER</text>
+<text x="1144" y="609" font-size="12" fill="#0f172a">avg_session_minutes</text>
+<text x="1294" y="609" font-size="12" fill="#64748b">NUMERIC(6,2)</text>
+<text x="1144" y="629" font-size="12" fill="#0f172a">error_rate</text>
+<text x="1294" y="629" font-size="12" fill="#64748b">NUMERIC(4,3)</text>
+<text x="1144" y="649" font-size="12" fill="#0f172a">segment</text>
+<text x="1294" y="649" font-size="12" fill="#64748b">TEXT</text>
+<text x="1144" y="669" font-size="12" fill="#0f172a">feature_ts</text>
+<text x="1294" y="669" font-size="12" fill="#64748b">TIMESTAMPTZ</text>
+<text x="1144" y="689" font-size="12" fill="#0f172a">updated_at</text>
+<text x="1294" y="689" font-size="12" fill="#64748b">TIMESTAMPTZ</text>
+<text x="1116" y="736" font-size="12" font-style="italic" fill="#166534">оновлюється з offline: рядки, де valid_to IS NULL</text>
+<text x="26" y="766" font-size="12" fill="#334155">PK - первинний ключ, FK - зовнішній ключ, UK - унікальне значення. 1 - один, 0..* - нуль або багато, 0..1 - нуль або один.</text>
+</svg>
